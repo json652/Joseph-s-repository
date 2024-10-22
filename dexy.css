@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -22,6 +23,7 @@ header {
     align-items: center;
     z-index: 100px;
     background-color: seagreen;
+    flex-wrap: wrap;
 }
 
 .menu a {
@@ -33,7 +35,7 @@ header {
 }
 
 header .logo {
-    font-weight: 700;
+    font-weight: 700px;
     font-size: 20px;
     text-decoration: none;
 }
@@ -48,14 +50,13 @@ header .logo {
 }
 
 .content {
-    text-align: justify;
-    left: 70%;
-    right: 40%;
     padding: 40px 15px;
     border-style: solid;
     border-color: green;
     margin-left: 256px;
     margin-right: 256px;
+    display: flex;
+    justify-content: center;
     background-color: #fff;
 }
 
@@ -69,7 +70,8 @@ header .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 15%;
+    height: auto;
 }
 
 .content footer {
@@ -82,5 +84,25 @@ header .logo {
     padding: 40px 100px;
     width: 100%;
 }
+
+/*Tablet*/
+@media all and (max-width: 768px) {
+    .content {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+}
+
+/*Celular*/
+@media all and (max-width: 425px) {
+    header{
+        flex-direction: column;
+    }
+    .content {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
 
 
